@@ -3,12 +3,14 @@
 #include <string.h>
 #include "menu.h"
 
-void scanLine(int dim, char tab[dim]){
+void scanLine(int dim, char tab[]){
     int ch, index;
-    tab[0]='\0';
-    for(index=0;((ch=getchar())!='\n')&&(ch!=EOF)&&(index<dim-1);index++) {
-        tab[index]=(char) ch;
-        tab[index+1]='\0';
+    getchar();
+    for(index=0;((ch=getchar())!='\n')&&(ch!=EOF);index++) {
+        if (index<dim-1) {
+            tab[index]=(char) ch;
+            tab[index+1]='\0';
+        }
     }
 }
 void printUser (int ID){
@@ -458,7 +460,7 @@ void newDir() {
             dataDir[i].contentId[k]=0; //for start all content in new directory is set on 0 (empty positions in new directory)
         }
         puts("Enter directory's name (max 14 characters).");
-        scanLine(dataDir[i].name, 15);
+        scanLine(15,dataDir[i].name);
         puts("Enter a type of data: U - users, M - mp3files");
         char type;
         while(((state=scanf("%c",&type))!=1) || ((type!='U')&&(type!='u')&&(type!='M')&&(type!='m'))){
