@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1494402583 source:c:\users\hanus\onedrive\documents\dokumenty\muzyka\func.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+
+1494348967 c:\users\hanus\onedrive\documents\dokumenty\muzyka\menu.h
+
+1494344212 source:c:\users\hanus\onedrive\documents\dokumenty\muzyka\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+
+1494402635 source:c:\users\hanus\onedrive\documents\dokumenty\muzyka\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+
